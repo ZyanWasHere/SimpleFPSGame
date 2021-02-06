@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,8 +7,8 @@ public class FPSCamera : MonoBehaviour
     //Toggles cursor visibility
     public bool VisibleCursor;
 
-    //Controls camera rotation speed
-    public Vector2 RotationSpeed;
+    //Controls camera's rotation sensititivy
+    public Vector2 CameraSensitivity;
 
     //Keeps track of camera's current X & Y position.
     private Vector2 CamRotation;
@@ -37,7 +37,7 @@ public class FPSCamera : MonoBehaviour
         Vector2 CamController = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
         //Adjust Player's X & Y rotation speed, with RotationSpeed
-        CamController += CamController * RotationSpeed;
+        CamController += CamController * CameraSensitivity;
 
         //TLDR: This will contain the camera's current X & Y rotation.
         //If not, it'll snap back to 0 on the X & Y axis.
