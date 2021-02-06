@@ -18,14 +18,14 @@ public class FPSCamera : MonoBehaviour
 
     //Gets control over the camera
     //Toggles cursor's visibility
-    private void Start()
+    void Start()
     {
         Cam = Camera.main;
         Cursor.visible = VisibleCursor;
     }
 
     //Updates inputs
-    private void Update()
+    void Update()
     {
         CameraUpdate();
     }
