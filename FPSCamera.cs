@@ -30,6 +30,7 @@ public class FPSCamera : MonoBehaviour
         CameraUpdate();
     }
 
+    //Updates camera controls, used in Update()
     void CameraUpdate()
     {
         //Create variable for mouse X & Y inputs
